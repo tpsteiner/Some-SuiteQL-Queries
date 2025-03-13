@@ -8,8 +8,8 @@ Oracle docs:
 - "By default, the Currency field displays the base currency of the subsidiary selected in the 
    Subsidiary field. You can change this value to any currency set up in your system"
 ------------------------------------------------------------------------------------
-Update: t.trandate >= '1/1/2024'
-Update: t.trandate <= '12/31/2024'
+Notes:
+
  */
 
 WITH interco_transactions AS (
