@@ -1,11 +1,17 @@
-/* 
+/*
+Description:
 Get a list of intercompany transactions, assuming all GL accounts have 'Intercompany' in the name.
 Includes To/From subsidiary info for Advanced Intercompany Journal Entries.
+------------------------------------------------------------------------------------
+Oracle docs:
+- "The first line of this journal entry must post to the Subsidiary you select"
+- "By default, the Currency field displays the base currency of the subsidiary selected in the 
+   Subsidiary field. You can change this value to any currency set up in your system"
 ------------------------------------------------------------------------------------
 Update: t.trandate >= '1/1/2024'
 Update: t.trandate <= '12/31/2024'
  */
- 
+
 WITH interco_transactions AS (
     SELECT DISTINCT
         tal.transaction
